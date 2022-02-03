@@ -1,6 +1,6 @@
-# D3로 2021~2022 기온 그래프 그려보기
+# D3로 2021~2022 서울 최고 기온 그래프 그려보기
 
-[날씨 데이터 출처](https://data.kma.go.kr/climate/RankState/selectRankStatisticsDivisionList.do?pgmNo=179)
+[날씨 데이터 출처](https://data.kma.go.kr/climate/RankState/selectRankStatisticsDivisionList.do?pgmNo=179)  
 [강의 링크](https://www.newline.co/fullstack-d3)
 
 ## Accessor function
