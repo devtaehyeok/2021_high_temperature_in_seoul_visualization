@@ -50,6 +50,7 @@ async function drawLineChart() {
     .domain(d3.extent(dataset, yAccessor))
     .range([dimensions.boundedHeight, 0])
     .nice();
+
   // 어는점은 섭씨 0도.
   const freezingTemperaturePlacement = yScale(0);
   // 어는점 아래 사각형으로 표시
@@ -64,8 +65,7 @@ async function drawLineChart() {
   const xScale = d3
     .scaleTime()
     .domain(d3.extent(dataset, xAccessor))
-    .range([0, dimensions.boundedWidth])
-    .nice();
+    .range([0, dimensions.boundedWidth]);
 
   // 5. 데이터 그리기
 
