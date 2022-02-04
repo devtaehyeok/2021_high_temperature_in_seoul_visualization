@@ -93,6 +93,25 @@ async function drawLineChart() {
     .call(xAxisGenerator)
     // 데이터 그래프 높이 만큼 수직이동 (원래 위치는 맨 꼭대기)
     .style("transform", `translateY(${dimensions.boundedHeight}px)`);
+  // 라벨 추가
+  const yAxisLabel = yAxis
+    .append("text")
+    .attr("x", -dimensions.boundedHeight / 2)
+    .attr("y", -dimensions.margin.left + 20)
+    .attr("fill", "#6b6b6b")
+    .style("font-size", "1rem")
+    .text("High temperature (℃)")
+    // 원래 각도는 0도가 아니라 180도임. 시계 반대 방향으로 회전.
+    .style("transform", "rotate(-90deg)")
+    .style("text-anchor", "middle");
+
+  const xAxisLabel = xAxis
+    .append("text")
+    .attr("x", dimensions.boundedWidth / 2)
+    .attr("y", dimensions.margin.bottom - 4)
+    .attr("fill", "#6b6b6b")
+    .style("font-size", "1rem")
+    .html("Date (yyyy-mm-dd)");
 }
 
 drawLineChart();
