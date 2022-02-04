@@ -64,7 +64,8 @@ async function drawLineChart() {
   const xScale = d3
     .scaleTime()
     .domain(d3.extent(dataset, xAccessor))
-    .range([0, dimensions.boundedWidth]);
+    .range([0, dimensions.boundedWidth])
+    .nice();
 
   // 5. 데이터 그리기
 
